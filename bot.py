@@ -1,10 +1,13 @@
 import telethon.sync as ts #import TelegramClient, events
 from telethon.sessions import StringSession
 import requests
+import os
 
-api_id = ${{secrets.API_ID}}
-api_hash = ${{secrets.API_HASH}}
-bot_token = ${{secrets.BOT_TOKEN}}
+api_id = os.getenv('API_ID')
+
+api_id = os.getenv('API_ID')
+api_hash = os.getenv('API_HASH')
+bot_token = os.getenv('BOT_TOKEN')
 
 #functions for specific commands
 def list_drivers(year):
@@ -90,11 +93,6 @@ def list_rules(n):
     
     print ('Done')
     return content 
-
-
-api_id = 26864957
-api_hash = '0148f496077b4d88053cfc6e20ce0903'
-bot_token = '7162081466:AAEyI9UeOmAxKQh_pC2hkiPBz94PcZf_28k'
 
 
 
