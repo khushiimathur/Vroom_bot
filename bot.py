@@ -2,8 +2,11 @@ import telethon.sync as ts #import TelegramClient, events
 from telethon.sessions import StringSession
 import requests
 import os
+import threading
+from http.server import HTTPServer, BaseHTTPRequestHandler
 
-api_id = os.getenv('API_ID')
+
+
 
 api_id = os.getenv('API_ID')
 api_hash = os.getenv('API_HASH')
@@ -209,4 +212,17 @@ async def handleMessage(event):
         await event.respond("Invalid message.")
 
 print('Bot is running...')
+
+def run_server():
+    class SimpleHandler(BaseHTTPRequestHandler):
+        def do_GET(self):
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b'Bot is running.')
+
+    port = int(os.getenv('PORT', 8000))
+    server = HTTPServer(('0.0.0.0', port), SimpleHandler)
+    server.serve_forever()
+
+threading.Thread(target=run_server).start()
 bot.run_until_disconnected()
