@@ -1,0 +1,6 @@
+The first competitive session of a weekend is Qualifying; an hour of running sets the starting order for the race.
+Drivers attempt to set the fastest lap times around the circuit hosting the Grand Prix, with the quickest starting the race at the front and the slowest from the back.
+Qualifying has three sessions: Q1, Q2, and Q3. Q1 lasts 18 minutes, Q2 runs for 15 minutes, and Q3 goes on for 12 minutes, with a seven and eight-minute break between each to make up an hour.
+At the end of Q1, the five slowest drivers are eliminated, and they will start the race in the order of their lap times. The slowest driver starts from 20th place, the second slowest in 19th place, and so on.
+Q2 sees the times set in Q1 wiped clean, and the process repeats for the remaining 15 drivers.
+Finally, Q3 has the remaining 10 competitors in a straight shootout to set the fastest time, with the quickest driver getting to start the race from first place, commonly known as pole position.

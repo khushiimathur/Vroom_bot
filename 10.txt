@@ -1,0 +1,7 @@
+Pit Stops
+There must be at least 0.15 seconds between mechanics attaching the wheels and the car dropping to the ground and then an additional 0.2 seconds before the driver leaves the pit stop area.
+A driver must also not exit the pit area in a manner that impedes a competitor otherwise they will receive a penalty.
+Pit Lane Speed Limit
+F1 might be all about speed, but that's not the case in the pit lane, where drivers must strictly observe speed limits.
+An 80 km/h pit lane speed limit is in effect at most events in every session, with some circuits having an even slower limit.
+Should a driver be found guilty of speeding, they'll receive a 100 euros fine for every km/h above the limit the speed gun catches them doing, up to a maximum of €1000.Introduced in 2011, the Drag Reduction System, commonly initialised as DRS, refers to an opening in the rear wing that lowers the air resistance as an F1 car speeds around the circuit.
