@@ -1,4 +1,4 @@
-import telethon.sync as ts #import TelegramClient, events
+import telethon.sync as ts 
 from telethon.sessions import StringSession
 import requests
 import os
@@ -8,9 +8,9 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
 
-api_id = os.getenv('API_ID')
-api_hash = os.getenv('API_HASH')
-bot_token = os.getenv('BOT_TOKEN')
+api_id = os.getenv("api_id")
+api_hash = os.getenv("api_hash")
+bot_token = os.getenv("bot_token")
 
 #functions for specific commands
 def list_drivers(year):
@@ -213,16 +213,16 @@ async def handleMessage(event):
 
 print('Bot is running...')
 
-def run_server():
-    class SimpleHandler(BaseHTTPRequestHandler):
-        def do_GET(self):
-            self.send_response(200)
-            self.end_headers()
-            self.wfile.write(b'Bot is running.')
-
-    port = int(os.getenv('PORT', 8000))
-    server = HTTPServer(('0.0.0.0', port), SimpleHandler)
-    server.serve_forever()
-
-threading.Thread(target=run_server).start()
+#def run_server():
+#    class SimpleHandler(BaseHTTPRequestHandler):
+#        def do_GET(self):
+#            self.send_response(200)
+#            self.end_headers()
+#            self.wfile.write(b'Bot is running.')
+#
+#    port = int(os.getenv('PORT', 8000))
+#    server = HTTPServer(('0.0.0.0', port), SimpleHandler)
+#    server.serve_forever()
+#
+#threading.Thread(target=run_server).start()
 bot.run_until_disconnected()
