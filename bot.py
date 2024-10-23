@@ -6,9 +6,9 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 import threading
 
 # Read environment variables (set these in Render's dashboard or .env file)
-api_id = os.getenv("api_id")
-api_hash = os.getenv("api_hash")
-bot_token = os.getenv("bot_token")
+api_id = str(os.getenv("API_ID"))
+api_hash = str(os.getenv("API_HASH"))
+bot_token = str(os.getenv("BOT_TOKEN"))
 
 # Functions for specific commands
 def list_drivers(year):
