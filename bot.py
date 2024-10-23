@@ -84,7 +84,7 @@ def list_rules(n):
     return content
 
 # Bot initialization with explicit bot token
-bot = ts.TelegramClient('bot', api_id, api_hash).start(bot_token=bot_token)
+bot = ts.TelegramClient('my_unique_bot', api_id, api_hash).start(bot_token=bot_token)
 
 @bot.on(ts.events.NewMessage(pattern='/start'))
 async def handleStart(event):
