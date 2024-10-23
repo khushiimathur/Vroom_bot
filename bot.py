@@ -188,20 +188,7 @@ async def handleMessage(event):
 
 print('Bot is running...')
 
-# Server to keep Render service alive
-def run_server():
-    class SimpleHandler(BaseHTTPRequestHandler):
-        def do_GET(self):
-            self.send_response(200)
-            self.end_headers()
-            self.wfile.write(b'Bot is running.')
 
-    port = int(os.getenv('PORT', 5000))
-    server = HTTPServer(('0.0.0.0', port), SimpleHandler)
-    server.serve_forever()
-
-# Run the server in a separate thread
-threading.Thread(target=run_server).start()
 
 # Start the bot and keep it running
 bot.run_until_disconnected()
