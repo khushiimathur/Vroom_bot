@@ -3,6 +3,7 @@ from telethon.sessions import StringSession
 import requests
 import os
 from http.server import HTTPServer, BaseHTTPRequestHandler
+import threading
 
 # Read environment variables (set these in Render's dashboard or .env file)
 api_id = os.getenv("api_id")
@@ -199,5 +200,8 @@ def run_server():
     server = HTTPServer(('0.0.0.0', port), SimpleHandler)
     server.serve_forever()
 
-run_server()
+# Run the server in a separate thread
+threading.Thread(target=run_server).start()
+
+# Start the bot and keep it running
 bot.run_until_disconnected()
