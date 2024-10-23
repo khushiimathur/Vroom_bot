@@ -196,7 +196,7 @@ def run_server():
             self.end_headers()
             self.wfile.write(b'Bot is running.')
 
-    port = int(os.getenv('PORT', 8000))
+    port = int(os.getenv('PORT', 5000))
     server = HTTPServer(('0.0.0.0', port), SimpleHandler)
     server.serve_forever()
 
