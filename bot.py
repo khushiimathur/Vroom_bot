@@ -3,7 +3,7 @@ from telethon.sessions import StringSession
 import requests
 import os
 from http.server import HTTPServer, BaseHTTPRequestHandler
-import threading
+
 
 # Read environment variables (set these in Render's dashboard or .env file)
 api_id = str(os.getenv("API_ID"))
@@ -84,7 +84,7 @@ def list_rules(n):
     return content
 
 # Bot initialization with explicit bot token
-bot = ts.TelegramClient('bot', api_id, api_hash).start(bot_token=bot_token)
+bot = ts.TelegramClient('bot_update', api_id, api_hash).start(bot_token=bot_token)
 
 @bot.on(ts.events.NewMessage(pattern='/start'))
 async def handleStart(event):
