@@ -6,9 +6,9 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
 # Read environment variables (set these in Render's dashboard or .env file)
-api_id = str(os.getenv("API_ID"))
-api_hash = str(os.getenv("API_HASH"))
-bot_token = str(os.getenv("BOT_TOKEN"))
+api_id = #secretkey
+api_hash = #secretkey
+bot_token = #secretkey
 
 # Functions for specific commands
 def list_drivers(year):
@@ -96,7 +96,7 @@ async def handleStart(event):
             '4. /driverinfo - Know about a particular driver\n'\
             '5. /constructors - List of constructors for a given year\n'\
             '6. /listrules - List the rules and regulations\n'\
-            'Enter the year you want to know about (Eg - .2013)\n'\
+            '7. /changeyear - Enter the year you want to know about (Eg - .2013)\n'\
             'Default year is 2019'
     await event.respond(reply)
 
@@ -177,7 +177,7 @@ async def handleMessage(event):
     elif change_year:
         change_year = False
         new_year = int(event.message.message)
-        if 2012 <= new_year <= 2019:
+        if 1983 <= new_year <= 2019:
             year = new_year
             await event.respond(f'Changed year to {year}')
         else:
