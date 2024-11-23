@@ -8,7 +8,7 @@ The Formula 1 Telegram Bot is a Python-based Telegram bot designed to provide in
 3. Race Schedules: Check the time and date of races for a given year.
 4. Constructors List: List all constructors and their associated drivers.
 5. F1 Rules: Learn about various categories of Formula 1 rules and regulations.
-6. Dynamic Year Selection: Change the year for fetching race data (2012–2019 by default).
+6. Dynamic Year Selection: Change the year for fetching race data.
 7. Interactive Commands: Provides an interactive experience by responding to user inputs.
 
 Here is the list of commands supported by the bot:
